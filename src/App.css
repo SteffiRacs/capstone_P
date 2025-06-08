@@ -1,38 +1,219 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color:#004d40
+}
+.primaryBtn {
+    background-color: #f4ce14;
+    box-shadow: 4px 5px 6px rgba(0,0,0,.25);
+    color: #212121;
+    cursor: pointer;
+   font-size: 18px;
+    font-weight: 500;
+    min-width: 200px;
+    padding-inline: 1rem;
+    transition: .28s ease;
+}
+.primaryBtn:hover {
+    background-color: #fbdabb;
+    box-shadow: 4px 5px 6px rgba(0,0,0,.25);
+    color: #212121;
+    cursor: pointer;
+   font-size: 18px;
+    font-weight: 500;
+    min-width: 200px;
+    padding-inline: 1rem;
+    transition: .28s ease;
+}
+
+
+
 .App {
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar container */
+.navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background-color: #fff; /* dark teal */
+  padding: 1rem 2rem;
+  color: #495e57;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo styles */
+.logo {
+  height: 50px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navigation styles */
+nav {
+  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #495e57;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f4ce14;
+  text-decoration: underline;
+}
+
+/* Responsive: On smaller screens, stack menu vertically or create a hamburger (optional) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #004d40;
+    position: absolute;
+    right: 2rem;
+    top: 70px;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none; 
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+  .heroSection {
+    background-color:#495e57;
+    height: 406px;
+    padding-block: 1.5rem;
+    position: relative;
+}
+
+.heroSection img {
+    height: 426px;
+    justify-self: center;
+    top: 24px;
+    width: 374px;
+}
+
+.text-yellow{
+  color: #f4ce14;
+  font-weight: 500;
+}
+
+.text-green{
+  color:#495e57;
+  font-weight: 500;
+}
+
+.text-salmon{
+  color:#ee9972;
+}
+
+.fixed-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.specialCard .card{
+  width:22rem;
+   transition: 0.32s ease-out;
+}
+
+
+.specialCard .card:hover {
+  transform: scale(1.1);
+}
+
+.specialCard .heading {
+    font-size: 40px;
+    margin: 35px 0;
+}
+.specialCard .price{
+  color: #ee9972;
+}
+
+.specialCard .description{
+  color:#495E57;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.specialCard .delivery{
+  font-weight: 500;
+}
+
+.specialCard .delivery:hover{
+  color: #f4ce14;
+}
+
+footer{
+  background-color: #edefee;
+}
+
+.aboutSection .imgGallery{
+  height:450px
+}
+.aboutSection .imgContainer {
+  width: 272px;
+  height: 338px;
+  margin:0 auto
+}
+
+.aboutSection .imgContainer:first-child {
+  position: relative;
+  top: 109px;
+  left:-60px;
+  border-radius: 1rem;
+  transition: 0.38s ease-out;
+}
+
+.aboutSection .imgContainer:first-child:hover {
+  z-index: 1;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.aboutSection .imgContainer:last-child {
+    position: relative;
+    left: 97px;
+    border-radius: 1rem;
+    transition: 0.38s ease;
+    top: -320px;
+}
+.aboutSection .imgContainer:last-child:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.aboutSection .imgContainer img {
+  border-radius: 1rem;
+  box-shadow: 4px 5px 6px rgba(0,0,0,.25);
+  height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.testimonialCard{
+  padding:150px 0;
+}
+.testimonialCard .card{
+   transition: 0.32s ease-out;
+}
+
+
+.testimonialCard .card:hover {
+  transform: scale(1.1);
 }
