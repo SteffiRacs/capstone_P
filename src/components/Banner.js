@@ -14,7 +14,7 @@ function Banner() {
             <p className="lead text-white">
               Experience fresh ingredients, warm ambiance, and authentic flavors. Reserve your table today!
             </p>
-            <Link to="/booking" className="btn primaryBtn btn-lg mt-3 rounded-pill">
+            <Link to="/booking" className="btn primaryBtn btn-lg mt-3 rounded-pill"  role="button">
               Reserve a Table
             </Link>
           </div>
