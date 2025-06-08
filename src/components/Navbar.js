@@ -27,12 +27,12 @@ function Navbar() {
         {/* Collapse menu with ms-auto to align right */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/">About</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/">Menu</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/booking">Reservations</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/">Order Online</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/">Login</Link></li>
+            <li className="nav-item px-3"><Link className="nav-link" to="/">Home</Link></li>
+            <li className="nav-item px-3"><Link className="nav-link" to="/">About</Link></li>
+            <li className="nav-item px-3"><Link className="nav-link" to="/">Menu</Link></li>
+            <li className="nav-item px-3"><Link className="nav-link" to="/booking">Reservations</Link></li>
+            <li className="nav-item px-3"><Link className="nav-link" to="/">Order Online</Link></li>
+            <li className="nav-item ps-3"><Link className="nav-link" to="/">Login</Link></li>
           </ul>
         </div>
       </div>
