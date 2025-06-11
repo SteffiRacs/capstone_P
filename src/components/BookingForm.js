@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function BookingForm() {
-  const [form, setForm] = useState({
-    name: '',
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const initialForm = location.state || {
     date: '',
     time: '',
     guests: 1,
     occasion: '',
-  });
+  };
 
-  const navigate = useNavigate();
+  const [form, setForm] = useState(initialForm);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,8 +21,7 @@ function BookingForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Booking submitted:', form);
-    // Redirect to customer details form after submission
-    navigate('/customerdetails');
+    navigate('/customerdetails', { state: form });
   };
 
   return (
@@ -29,16 +30,7 @@ function BookingForm() {
         <div className="row justify-content-center">
           <div className="col-sm-12 col-md-8 col-lg-6">
             <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label>Name</label>
-                <input
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  className="form-control"
-                  required
-                />
-              </div>
+              
               <div className="mb-3">
                 <label>Date</label>
                 <input
